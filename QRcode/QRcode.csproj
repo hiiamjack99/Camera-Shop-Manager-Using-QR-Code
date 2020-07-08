@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BE14420-FD99-4469-8BB1-1634F527A8D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QRcode</RootNamespace>
+    <AssemblyName>QRcode</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OzekiSDK">
+      <HintPath>..\..\..\..\Documents\Ozeki\Ozeki SDK\Examples\Resources\NET4\OzekiSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraController.Designer.cs">
+      <DependentUpon>CameraController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemTraSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemTraSanPham.Designer.cs">
+      <DependentUpon>KiemTraSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLySanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLySanPham.Designer.cs">
+      <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CameraController.resx">
+      <DependentUpon>CameraController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemTraSanPham.resx">
+      <DependentUpon>KiemTraSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLySanPham.resx">
+      <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126581-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115746-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\186400-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171495-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\314682-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171448-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\298758-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352285-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1564491-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285657-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211885-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neon Background Wall Poster Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\383091-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2559804-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352158-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon-frame1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neon-frame2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\THEMMOISANPHAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TMSP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text effect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Adobe_Photoshop_Folder_5568789.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_brand_brands_logos_adobe_photoshop-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-abstract-template-black-frame-layout-metallic-red-light-on-dark-background-modern-luxury-futuristic-technology-concept.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgma.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
